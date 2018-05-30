@@ -45,4 +45,232 @@ button
 	&:focus
 		outline: none
 
+.nav
+	position: fixed
+	display: table
+	width: 134px
+	height: 100vh
+	padding: 20px
+	float: left
+	background-color: #F5F5F5
+	z-index: 2
+	&__logo
+		position: absolute
+		top: 40px
+		left: 50%
+		margin-left: -40px
+	&-list
+		display: table-cell
+		vertical-align: middle
+		padding-left: 0
+		list-style-type: none
+		margin-bottom: 0
+		&__item
+			font-size: 14px
+			margin-bottom: 6px
+			&:last-child
+				margin-bottom: 0
+			a
+				color: #000
+				transition: all ease .3s
+				&.active
+					font-family: $bold
+				&:hover
+					color: #4F4F4F
+	&-soc
+		width: 38px
+		position: absolute
+		bottom: 40px
+		left: 50%
+		margin-left: -19px
+		&__fb
+			float: left
+			margin-right: 6px
+		&__in
+			float: left
+
+.content
+	position: relative
+	width: calc(100% - 134px)
+	float: right
+	height: 100vh
+
+.main
+	position: relative
+	&__logo
+		position: absolute
+		top: 40px
+		left: 50%
+		margin-left: -93px
+		z-index: 1
+	&-slider
+		height: 100vh
+		&__slide
+			position: relative
+			height: 100vh
+			width: 100%
+			outline: none
+			background-position: center center
+			background-size: cover
+			background-repeat: no-repeat
+			&:before
+				content: ''
+				width: 100%
+				height: 100%
+				background-color: rgba(#020202, .08)
+				position: absolute
+				top: 0
+				left: 0
+			&.project1
+				background-image: url(../img/project1.jpg)
+			&.project2
+				background-image: url(../img/project2.jpg)
+			&.project3
+				background-image: url(../img/project3.jpg)
+			&.project4
+				background-image: url(../img/project4.jpg)
+			&.project5
+				background-image: url(../img/project5.jpg)
+			&.project6
+				background-image: url(../img/project6.jpg)
+		&__ttl
+			font-size: 25px
+			position: absolute
+			bottom: 60px
+			right: 60px
+			color: #fff
+
+.slick-arrow
+	z-index: 1
+	cursor: pointer
+	width: 24px
+	height: 44px
+	position: absolute
+	top: 50%
+	margin-top: -14px
+	font-size: 0
+	background-size: cover
+	transition: all ease .3s
+	&.slick-next
+		right: 20px
+		background-image: url(../img/arr_next.svg)
+		&:hover
+			background-image: url(../img/arr_next_hover.svg)
+	&.slick-prev
+		left: 20px
+		background-image: url(../img/arr_prev.svg)
+		&:hover
+			background-image: url(../img/arr_prev_hover.svg)
+
+.slick-dots
+	display: table
+	padding-left: 0
+	list-style-type: none
+	margin-bottom: 0
+	position: relative
+	bottom: 60px
+	left: 0
+	right: 0
+	margin-right: auto
+	margin-left: auto
+	li
+		cursor: pointer
+		display: inline-block
+		width: 15px
+		height: 15px
+		border-radius: 50%
+		background-color: #898989
+		margin-right: 20px
+		font-size: 0
+		&:last-child
+			margin-right: 0
+		&.slick-active
+			background-color: #fff
+
+.portfolio
+	&__ttl
+		font-family: $bold
+		font-size: 25px
+		letter-spacing: .05em
+		color: #333333
+		text-align: center
+		margin: 40px 0
+	&-item
+		position: relative
+		background-position: center center
+		background-size: cover
+		background-repeat: no-repeat
+		&.project1
+			background-image: url(../img/project1.jpg)
+		&.project2
+			background-image: url(../img/project2.jpg)
+		&.project3
+			background-image: url(../img/project3.jpg)
+		&.project4
+			background-image: url(../img/project4.jpg)
+		&.project5
+			background-image: url(../img/project5.jpg)
+		&.project6
+			background-image: url(../img/project6.jpg)
+		&__ttl
+			position: relative
+			font-size: 16px
+			letter-spacing: .05em
+			color: #333333
+			margin-top: 20px
+			padding-bottom: 10px
+			&:after
+				content: ''
+				width: 130px
+				height: 1px
+				background-color: #828282
+				position: absolute
+				bottom: 0
+				left: 0
+		&__link
+			display: block
+			font-family: $bold
+			font-size: 14px
+			color: #8e8e8e
+			margin-bottom: 40px
+			&:hover
+				color: darken(#8e8e8e, 30%)
+		&-info
+			opacity: 0
+			height: 100%
+			padding: 30px
+			position: relative
+			transition: all ease .3s
+			&:hover
+				opacity: 1
+			&:before
+				content: ''
+				width: 100%
+				height: 100%
+				background-color: rgba(#010101, .75)
+				position: absolute
+				top: 0
+				left: 0
+			&__ttl
+				position: relative
+				font-family: $bold
+				font-size: 14px
+				color: #fff
+			&__txt
+				position: relative
+				font-size: 14px
+				color: #fff
+				span
+					font-family: $bold
+
+.foot
+	background-color: #4F4F4F
+	padding: 20px 0
+	&__logo
+		margin: 0 auto 10px
+	&__txt
+		font-size: 14px
+		text-align: center
+		color: #fff
+
 @import "media" // Always at the end

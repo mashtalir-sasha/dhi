@@ -77,4 +77,18 @@ $(function() {
 		e.preventDefault();
 	});
 
+	$('.main-slider').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		fade: true,
+		autoplay: true
+	});
+
+	var widthDots = $('.slick-dots').width();
+	$('.slick-dots').css('margin-left', 'calc('+widthDots +' / 2)');
+
+	$('.portfolio-item').matchHeight();
+
 });
