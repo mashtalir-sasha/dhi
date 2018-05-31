@@ -1,38 +1,69 @@
 @import "vars"
 
-
-/*==========  Desktop First  ==========*/
-
-
-//Extra large: ≥1200px
+//Extra large: ≥1440px
 +media-breakpoint-down(xl)
 
-//Large: ≥992px
+//Large: ≥1200px  max-width: 1439px
 +media-breakpoint-down(lg)
 
-//Medium: ≥768px
+//Medium: ≥992px max-width: 1199px
 +media-breakpoint-down(md)
 
-//Small: ≥576px
+//Small: ≥768px max-width: 991px
 +media-breakpoint-down(sm)
+	.hamburger
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 10
+		line-height: 1
+		background-color: #F5F5F5
+		transition: all ease .3s
+		&.is-active
+			left: 134px
+	body
+		&:after
+			overflow: hidden
+			content: ''
+			width: 0
+			height: 100%
+			background-color: rgba(#000, .6)
+			position: fixed
+			top: 0
+			left: 0
+			transition: all ease .3s
+		&.nav-show
+			&:after
+				width: 100%
+	.nav
+		left: -134px
+		transition: all ease .3s
+		&.show
+			left: 0
+	.content
+		width: 100%
+		float: none
+	.technologies
+		&__img
+			margin-bottom: 20px
 
-//Extra small: >0
+//Extra small: ≥576px max-width: 767px
 +media-breakpoint-down(xs)
 
-
-/*==========  Mobile First  ==========*/
-
-//Extra small: <576px
-+media-breakpoint-up(xs)
-
-//Small: ≤576px
-+media-breakpoint-up(sm)
-
-//Medium: ≤768px
-+media-breakpoint-up(md)
-
-//Large: ≤992px
-+media-breakpoint-up(lg)
-
-//Extra large: ≤1200px
-+media-breakpoint-up(xl)
+//Extra small: >0 max-width: 575px
++media-breakpoint-down(xxs)
+	.main-slider
+		&__ttl
+			font-size: 18px
+			right: inherit
+			left: 10px
+	.portfolio-item-info
+		padding: 15px
+		&__txt
+			font-size: 13px
+	.vacancies
+		&__ttl
+			font-size: 20px
+		&__link
+			margin-left: 0
+			font-size: 16px

@@ -45,6 +45,13 @@ button
 	&:focus
 		outline: none
 
+.mh100vh
+	min-height: calc(100vh - 108px)
+
+.p0
+	padding-left: 0
+	padding-right: 0
+
 .nav
 	position: fixed
 	display: table
@@ -90,6 +97,7 @@ button
 			float: left
 
 .content
+	overflow-x: hidden
 	position: relative
 	width: calc(100% - 134px)
 	float: right
@@ -262,6 +270,89 @@ button
 				color: #fff
 				span
 					font-family: $bold
+
+.vacancies
+	&__ttl
+		max-width: 700px
+		margin: 40px auto
+		font-family: $bold
+		font-size: 25px
+		letter-spacing: .05em
+		color: #333333
+		text-align: center
+	&__img
+		margin: 0 auto
+	&__subttl
+		font-family: $bold
+		font-size: 18px
+		margin: 40px 0
+	&__link
+		display: block
+		font-size: 18px
+		margin-bottom: 10px
+		margin-left: 20px
+		color: #8e8e8e
+		&:hover
+			color: darken(#8e8e8e, 30%)
+		&:last-child
+			margin-bottom: 40px
+
+.about
+	&__ttl
+		margin: 40px 0
+		font-family: $bold
+		font-size: 25px
+		letter-spacing: .05em
+		color: #333333
+		text-align: center
+	&__txt
+		margin-bottom: 10px
+		&:last-child
+			margin-bottom: 40px
+		span
+			font-family: $bold
+	&__video
+		display: block
+		width: 100%
+		height: auto
+		max-width: 1300px
+		margin: 0 auto 40px
+
+.contacts
+	&__img
+		height: 300px
+		background-image: url(../img/contacts_img.jpg)
+		background-size: cover
+		margin: 0 auto 40px
+	&__wrap
+		max-width: 230px
+		margin: 0 auto 40px
+	&__ttl
+		font-family: $bold
+		font-size: 18px
+		margin-bottom: 20px
+	&__txt
+		margin-bottom: 60px
+	&__link
+		display: block
+		color: #000
+		margin-bottom: 6px
+		&:last-child
+			margin-bottom: 0
+
+.technologies
+	&__ttl
+		margin: 40px 0
+		font-family: $bold
+		font-size: 25px
+		letter-spacing: .05em
+		color: #333333
+		text-align: center
+	&__wrap
+		margin-bottom: 40px
+	&__subttl
+		font-family: $bold
+		margin-bottom: 20px
 
 .foot
 	background-color: #4F4F4F

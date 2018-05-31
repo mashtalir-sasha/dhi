@@ -9,8 +9,8 @@ var gulp          = require('gulp'),
 		autoprefixer  = require('gulp-autoprefixer'),
 		notify        = require("gulp-notify"),
 		del           = require('del'),
-		imagemin      = require('gulp-imagemin'),
-		cache         = require('gulp-cache');
+		imagemin      = require('gulp-imagemin');
+		//cache         = require('gulp-cache');
 
 gulp.task('browser-sync', function() {
 	browsersync({
@@ -55,7 +55,7 @@ gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
 
 gulp.task('imagemin', function() {
 	return gulp.src('app/img/**/*')
-	.pipe(cache(imagemin())) // Cache Images
+	.pipe(imagemin())
 	.pipe(gulp.dest('dist/img')); 
 });
 
@@ -64,6 +64,8 @@ gulp.task('build', ['removedist', 'sass', 'js', 'imagemin'], function() {
 	var buildFiles = gulp.src([
 		'app/*.html',
 		'app/**/*.php',
+		'app/**/*.pdf',
+		'app/**/*.mp4',
 		'app/.htaccess'
 		]).pipe(gulp.dest('dist'));
 
@@ -83,6 +85,6 @@ gulp.task('build', ['removedist', 'sass', 'js', 'imagemin'], function() {
 });
 
 gulp.task('removedist', function() { return del.sync('dist'); });
-gulp.task('clearcache', function () { return cache.clearAll(); });
+//gulp.task('clearcache', function () { return cache.clearAll(); });
 
 gulp.task('default', ['watch']);
