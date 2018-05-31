@@ -17,10 +17,11 @@
 		left: 0
 		z-index: 10
 		line-height: 1
-		background-color: #F5F5F5
+		background-color: rgba(#F5F5F5, .4)
 		transition: all ease .3s
 		&.is-active
 			left: 134px
+
 	body
 		&:after
 			overflow: hidden
@@ -46,6 +47,9 @@
 	.technologies
 		&__img
 			margin-bottom: 20px
+	.portfolio-item
+		&__ttl
+			margin-bottom: 0
 
 //Extra small: ≥576px max-width: 767px
 +media-breakpoint-down(xs)
